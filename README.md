@@ -17,14 +17,14 @@ The page guides a participant through the following flow:
 
 ### Survey questions
 
-| # | Topic | Response type | Required? |
-|---|---|---|---|
-| 1 | Whether the visit fell short of expectations | Yes / No | Yes |
-| 2 | Appointment wait time | One of four time ranges | Yes |
-| 3 | Experience with the health care provider | Five-point quality scale | Yes |
-| 4 | Likelihood of recommending UBC Student Health and Wellbeing | Agreement scale, including “Not Applicable” | Yes |
-| 5 | Health conditions or disabilities the participant identifies with | Select all that apply | No |
-| 6 | Compliment or opportunity for improvement | Free-text response | No |
+| #   | Topic                                                             | Response type                               | Required? |
+| --- | ----------------------------------------------------------------- | ------------------------------------------- | --------- |
+| 1   | Whether the visit fell short of expectations                      | Yes / No                                    | Yes       |
+| 2   | Appointment wait time                                             | One of four time ranges                     | Yes       |
+| 3   | Experience with the health care provider                          | Five-point quality scale                    | Yes       |
+| 4   | Likelihood of recommending UBC Student Health and Wellbeing       | Agreement scale, including “Not Applicable” | Yes       |
+| 5   | Health conditions or disabilities the participant identifies with | Select all that apply                       | No        |
+| 6   | Compliment or opportunity for improvement                         | Free-text response                          | No        |
 
 ## Run it locally
 
@@ -53,7 +53,6 @@ Serving the file locally is optional; it does not add a backend or enable respon
 
 ```text
 .
-├── CLAUDE.md
 ├── README.md
 └── final_draft.html
 ```
@@ -72,17 +71,20 @@ Serving the file locally is optional; it does not add a backend or enable respon
 This update changes only how the survey looks and moves. The six questions, their wording, answer options and order are exactly the same as before. The UBC wordmark, the Thunderbird artwork, the campus map background, the colour palette and the window-style layout are also unchanged.
 
 ### Loading
+
 - **New loading screen:** while the page opens, a cream screen shows the UBC wordmark, a navy loading bar and the text "LOADING SURVEY...". It fades out after about one second.
 - **Entrance animation:** after the loading screen, the header and the two windows slide up into place.
 - **Question transitions:** each question, the start screen and the completion screen fade in when they appear.
 
 ### Progress bar
+
 - **Smooth fill:** the bar now glides to its new width. Before, it jumped in blocky steps.
 - **New look:** the fill is a navy gradient with moving gold diagonal stripes, a light sheen on top and a gold leading edge. The track has a soft inset shadow.
 - **Checkpoints:** diamond markers sit on the bar between questions. Each one turns gold with a small "pop" when the student passes it.
 - **Counting percentage:** the percentage counts up to its new value instead of jumping.
 
 ### Answer choices and buttons
+
 - **Checkboxes:** each answer has a square checkbox on the right. A selected answer shows a gold check on navy, plus a gold bar on its left edge. This replaces the old `[X]` text marks.
 - **No flicker:** picking an answer updates it in place. The whole question card no longer redraws on every click.
 - **Buttons:** buttons lift slightly on hover and press in when clicked.
@@ -90,6 +92,7 @@ This update changes only how the survey looks and moves. The six questions, thei
 - **Required-answer message:** pressing Continue without answering a required question now shows a message inside the page, which shakes once. Before, it was a browser pop-up.
 
 ### Prize wheel
+
 - **Redesign:** the wheel has navy, gold and cream slices. Around it are a thick navy rim with 24 lights, pegs between the slices, a navy-and-gold centre hub with "UBC", and a new teardrop pointer.
 - **Spin:** the wheel makes six full turns over about 5.5 seconds and slows down gradually. The pointer flicks each time a peg passes it, and the rim lights chase while it spins.
 - **Win:** the winning slice flashes with a gold outline and the lights blink. The prize appears in a gold "You won" card, and confetti bursts from the wheel.
@@ -98,6 +101,7 @@ This update changes only how the survey looks and moves. The six questions, thei
 - **One spin:** the spin button is disabled after one spin, as before.
 
 ### Accessibility
+
 - If the student's device is set to reduce motion, the page skips the confetti and the loading delay, and the wheel stops after a short spin.
 - The spin result is announced to screen readers when it appears.
 
